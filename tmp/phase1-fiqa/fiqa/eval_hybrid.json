@@ -1,0 +1,11 @@
+{
+  "recall@10": 0.4307619421045349,
+  "mrr@10": 0.40953850676072867,
+  "ndcg@10": 0.3442371095759937,
+  "queries_evaluated": 648,
+  "avg_latency_ms": 457.8392603463367,
+  "avg_estimated_total_tokens": 1764.6049382716049,
+  "avg_estimated_cost_usd": 0.003529209876543206,
+  "pred_path": "/home/zzhan621/CSE579/Project-CSE579/results/fiqa/hybrid.jsonl",
+  "qrels_path": "data/fiqa/raw/qrels_test.jsonl"
+}

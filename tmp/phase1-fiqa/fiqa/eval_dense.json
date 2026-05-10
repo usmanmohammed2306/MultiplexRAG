@@ -1,0 +1,11 @@
+{
+  "recall@10": 0.43893798673891266,
+  "mrr@10": 0.44633916323731143,
+  "ndcg@10": 0.3687398029710634,
+  "queries_evaluated": 648,
+  "avg_latency_ms": 11.433336211161482,
+  "avg_estimated_total_tokens": 1431.067901234568,
+  "avg_estimated_cost_usd": 0.0028621358024691354,
+  "pred_path": "/home/zzhan621/CSE579/Project-CSE579/results/fiqa/dense.jsonl",
+  "qrels_path": "data/fiqa/raw/qrels_test.jsonl"
+}

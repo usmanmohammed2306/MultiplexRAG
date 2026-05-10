@@ -1,0 +1,92 @@
+{
+  "accuracy": 0.66,
+  "labels": [
+    "dense",
+    "hybrid",
+    "sparse"
+  ],
+  "router_settings": {
+    "policy": "classifier",
+    "confidence_threshold": 0.45,
+    "fallback_mode": "dense",
+    "use_retrieval_features": false,
+    "label_metrics": [
+      "mrr@10"
+    ],
+    "label_weights": [
+      1.0
+    ],
+    "label_tie_preference": "hybrid",
+    "label_near_tie_mode": "dense",
+    "label_near_tie_margin": 0.03
+  },
+  "train_size": 800,
+  "test_size": 200,
+  "train_label_distribution": {
+    "dense": 630,
+    "hybrid": 117,
+    "sparse": 53
+  },
+  "test_label_distribution": {
+    "dense": 153,
+    "hybrid": 30,
+    "sparse": 17
+  },
+  "predicted_label_distribution": {
+    "dense": 167,
+    "hybrid": 20,
+    "sparse": 13
+  },
+  "metrics": [
+    "recall@10",
+    "mrr@10",
+    "ndcg@10"
+  ],
+  "baselines": {
+    "sparse": {
+      "recall@10": 0.1659999999999999,
+      "mrr@10": 0.3019543650793652,
+      "ndcg@10": 0.1669324681700718,
+      "queries_evaluated": 200,
+      "avg_latency_ms": 210.64779272302985,
+      "avg_estimated_total_tokens": 1768.675,
+      "avg_estimated_cost_usd": 0.0035373499999999973
+    },
+    "dense": {
+      "recall@10": 0.25099999999999995,
+      "mrr@10": 0.3722500000000001,
+      "ndcg@10": 0.23072703124094424,
+      "queries_evaluated": 200,
+      "avg_latency_ms": 1301.280527766794,
+      "avg_estimated_total_tokens": 1640.18,
+      "avg_estimated_cost_usd": 0.0032803599999999982
+    },
+    "hybrid": {
+      "recall@10": 0.24275000000000024,
+      "mrr@10": 0.343248015873016,
+      "ndcg@10": 0.21781870899801864,
+      "queries_evaluated": 200,
+      "avg_latency_ms": 1433.0208038166165,
+      "avg_estimated_total_tokens": 1711.22,
+      "avg_estimated_cost_usd": 0.0034224399999999993
+    }
+  },
+  "router": {
+    "recall@10": 0.24775000000000005,
+    "mrr@10": 0.3695436507936509,
+    "ndcg@10": 0.22905061608699145,
+    "queries_evaluated": 200,
+    "avg_latency_ms": 1230.726284654811,
+    "avg_estimated_total_tokens": 1653.045,
+    "avg_estimated_cost_usd": 0.003306089999999998
+  },
+  "oracle": {
+    "recall@10": 0.26350000000000023,
+    "mrr@10": 0.4636349206349206,
+    "ndcg@10": 0.26000731122009596,
+    "queries_evaluated": 200,
+    "avg_latency_ms": 1397.387951221317,
+    "avg_estimated_total_tokens": 1700.97,
+    "avg_estimated_cost_usd": 0.0034019399999999996
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "recall@10": 0.15221517479590105,
+  "mrr@10": 0.5084549609317409,
+  "ndcg@10": 0.3061909202958143,
+  "queries_evaluated": 323,
+  "avg_latency_ms": 2.782646849197869,
+  "avg_estimated_total_tokens": 2287.839009287926,
+  "avg_estimated_cost_usd": 0.0045756780185758515,
+  "pred_path": "/home/zzhan621/CSE579/Project-CSE579/results/nfcorpus/sparse.jsonl",
+  "qrels_path": "data/nfcorpus/raw/qrels_test.jsonl"
+}

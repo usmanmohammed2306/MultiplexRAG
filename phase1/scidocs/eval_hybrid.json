@@ -1,0 +1,11 @@
+{
+  "recall@10": 0.20991666666666595,
+  "mrr@10": 0.3343496031746031,
+  "ndcg@10": 0.19847965982431753,
+  "queries_evaluated": 1000,
+  "avg_latency_ms": 252.68505830690265,
+  "avg_estimated_total_tokens": 1756.995,
+  "avg_estimated_cost_usd": 0.0035139900000000046,
+  "pred_path": "results/scidocs/hybrid.jsonl",
+  "qrels_path": "data/scidocs/raw/qrels_test.jsonl"
+}

@@ -1,0 +1,11 @@
+{
+  "recall@10": 0.7756666666666666,
+  "mrr@10": 0.6183650793650796,
+  "ndcg@10": 0.652284944994416,
+  "queries_evaluated": 300,
+  "avg_latency_ms": 137.1911151893437,
+  "avg_estimated_total_tokens": 2274.3633333333332,
+  "avg_estimated_cost_usd": 0.004548726666666664,
+  "pred_path": "/home/zzhan621/CSE579/Project-CSE579/results/scifact/sparse.jsonl",
+  "qrels_path": "data/scifact/raw/qrels_test.jsonl"
+}

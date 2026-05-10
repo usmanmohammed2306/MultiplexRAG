@@ -1,0 +1,11 @@
+{
+  "recall@10": 0.8305555555555555,
+  "mrr@10": 0.6562724867724867,
+  "ndcg@10": 0.69388083905276,
+  "queries_evaluated": 300,
+  "avg_latency_ms": 209.24011283243695,
+  "avg_estimated_total_tokens": 2208.9766666666665,
+  "avg_estimated_cost_usd": 0.004417953333333332,
+  "pred_path": "/home/zzhan621/CSE579/Project-CSE579/results/scifact/hybrid.jsonl",
+  "qrels_path": "data/scifact/raw/qrels_test.jsonl"
+}

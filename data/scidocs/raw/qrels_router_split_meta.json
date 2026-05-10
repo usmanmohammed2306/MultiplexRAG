@@ -1,0 +1,14 @@
+{
+  "source_qrels": "data/scidocs/raw/qrels_test.jsonl",
+  "split_unit": "query_id",
+  "train_ratio": 0.8,
+  "seed": 42,
+  "total_qrels_rows": 29928,
+  "train_qrels_rows": 23946,
+  "test_qrels_rows": 5982,
+  "total_unique_queries": 1000,
+  "train_unique_queries": 800,
+  "test_unique_queries": 200,
+  "train_out": "data/scidocs/raw/qrels_router_train.jsonl",
+  "test_out": "data/scidocs/raw/qrels_router_test.jsonl"
+}

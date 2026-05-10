@@ -1,0 +1,11 @@
+{
+  "recall@10": 0.1590147087260542,
+  "mrr@10": 0.5055051845299522,
+  "ndcg@10": 0.31914492996390487,
+  "queries_evaluated": 323,
+  "avg_latency_ms": 4.3300782091016,
+  "avg_estimated_total_tokens": 2223.2445820433436,
+  "avg_estimated_cost_usd": 0.00444648916408669,
+  "pred_path": "/home/zzhan621/CSE579/Project-CSE579/results/nfcorpus/dense.jsonl",
+  "qrels_path": "data/nfcorpus/raw/qrels_test.jsonl"
+}

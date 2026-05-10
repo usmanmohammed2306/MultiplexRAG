@@ -1,0 +1,116 @@
+[
+  {
+    "dataset": "scifact",
+    "raw_dir": "data/scifact/raw",
+    "corpus": null,
+    "queries": {
+      "queries": 1109,
+      "avg_chars": 89.06,
+      "avg_tokens": 12.89,
+      "median_tokens": 12.0
+    },
+    "qrels_train": {
+      "rows": 919,
+      "unique_queries": 809,
+      "avg_rels_per_query": 1.14,
+      "median_rels_per_query": 1.0
+    },
+    "qrels_dev": null,
+    "qrels_test": {
+      "rows": 339,
+      "unique_queries": 300,
+      "avg_rels_per_query": 1.13,
+      "median_rels_per_query": 1.0
+    },
+    "qrels_router_train": null,
+    "qrels_router_test": null
+  },
+  {
+    "dataset": "scidocs",
+    "raw_dir": "data/scidocs/raw",
+    "corpus": null,
+    "queries": {
+      "queries": 1000,
+      "avg_chars": 71.63,
+      "avg_tokens": 9.97,
+      "median_tokens": 10.0
+    },
+    "qrels_train": null,
+    "qrels_dev": null,
+    "qrels_test": {
+      "rows": 29928,
+      "unique_queries": 1000,
+      "avg_rels_per_query": 29.93,
+      "median_rels_per_query": 30.0
+    },
+    "qrels_router_train": {
+      "rows": 23946,
+      "unique_queries": 800,
+      "avg_rels_per_query": 29.93,
+      "median_rels_per_query": 30.0
+    },
+    "qrels_router_test": {
+      "rows": 5982,
+      "unique_queries": 200,
+      "avg_rels_per_query": 29.91,
+      "median_rels_per_query": 30.0
+    }
+  },
+  {
+    "dataset": "nfcorpus",
+    "raw_dir": "data/nfcorpus/raw",
+    "corpus": null,
+    "queries": {
+      "queries": 3237,
+      "avg_chars": 21.93,
+      "avg_tokens": 3.39,
+      "median_tokens": 2.0
+    },
+    "qrels_train": {
+      "rows": 110575,
+      "unique_queries": 2590,
+      "avg_rels_per_query": 42.69,
+      "median_rels_per_query": 18.0
+    },
+    "qrels_dev": null,
+    "qrels_test": {
+      "rows": 12334,
+      "unique_queries": 323,
+      "avg_rels_per_query": 38.19,
+      "median_rels_per_query": 16.0
+    },
+    "qrels_router_train": null,
+    "qrels_router_test": null
+  },
+  {
+    "dataset": "fiqa",
+    "raw_dir": "data/fiqa/raw",
+    "corpus": null,
+    "queries": {
+      "queries": 6648,
+      "avg_chars": 61.71,
+      "avg_tokens": 11.07,
+      "median_tokens": 11.0
+    },
+    "qrels_train": {
+      "rows": 14166,
+      "unique_queries": 5500,
+      "avg_rels_per_query": 2.58,
+      "median_rels_per_query": 2.0
+    },
+    "qrels_dev": {
+      "rows": 1238,
+      "unique_queries": 500,
+      "avg_rels_per_query": 2.48,
+      "median_rels_per_query": 2.0
+    },
+    "qrels_test": {
+      "rows": 1706,
+      "unique_queries": 648,
+      "avg_rels_per_query": 2.63,
+      "median_rels_per_query": 2.0
+    },
+    "qrels_router_train": null,
+    "qrels_router_test": null
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "recall@10": 0.23069999999999943,
+  "mrr@10": 0.36066904761904717,
+  "ndcg@10": 0.21662774853285502,
+  "queries_evaluated": 1000,
+  "avg_latency_ms": 53.610781667754054,
+  "avg_estimated_total_tokens": 1678.122,
+  "avg_estimated_cost_usd": 0.0033562440000000017,
+  "pred_path": "/home/zzhan621/CSE579/Project-CSE579/results/scidocs/dense.jsonl",
+  "qrels_path": "data/scidocs/raw/qrels_test.jsonl"
+}

@@ -1,0 +1,11 @@
+{
+  "recall@10": 0.79,
+  "mrr@10": 0.6055357142857142,
+  "ndcg@10": 0.6479491607164062,
+  "queries_evaluated": 300,
+  "avg_latency_ms": 6.089465493957202,
+  "avg_estimated_total_tokens": 2165.383333333333,
+  "avg_estimated_cost_usd": 0.004330766666666669,
+  "pred_path": "results/scifact/dense.jsonl",
+  "qrels_path": "data/scifact/raw/qrels_test.jsonl"
+}

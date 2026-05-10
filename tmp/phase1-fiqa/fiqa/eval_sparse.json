@@ -1,0 +1,11 @@
+{
+  "recall@10": 0.27839878742656515,
+  "mrr@10": 0.27133793846756804,
+  "ndcg@10": 0.2175091816978161,
+  "queries_evaluated": 648,
+  "avg_latency_ms": 418.0526433363097,
+  "avg_estimated_total_tokens": 2022.030864197531,
+  "avg_estimated_cost_usd": 0.00404406172839506,
+  "pred_path": "/home/zzhan621/CSE579/Project-CSE579/results/fiqa/sparse.jsonl",
+  "qrels_path": "data/fiqa/raw/qrels_test.jsonl"
+}

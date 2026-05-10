@@ -1,0 +1,11 @@
+{
+  "recall@10": 0.16387984447180398,
+  "mrr@10": 0.5455341785837141,
+  "ndcg@10": 0.3368283057542066,
+  "queries_evaluated": 323,
+  "avg_latency_ms": 8.081563076598357,
+  "avg_estimated_total_tokens": 2221.5510835913315,
+  "avg_estimated_cost_usd": 0.004443102167182665,
+  "pred_path": "/home/zzhan621/CSE579/Project-CSE579/results/nfcorpus/hybrid.jsonl",
+  "qrels_path": "data/nfcorpus/raw/qrels_test.jsonl"
+}

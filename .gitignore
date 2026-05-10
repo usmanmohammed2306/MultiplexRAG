@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+
+# Local tooling
+.codex
+.codex/
+
+# Dataset artifacts
+data/*/.tmp_beir/
+data/*/processed/
+data/*/raw/corpus.jsonl
+data/*/raw/*.pkl
+
+# Model artifacts
+*.pkl
+
+# OS/editor noise
+.DS_Store

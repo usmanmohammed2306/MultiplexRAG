@@ -1,0 +1,196 @@
+{
+  "phase": "phase1",
+  "experiment": "dense-vs-sparse-vs-hybrid-with-router",
+  "topk": 10,
+  "datasets": {
+    "scifact": {
+      "source": "current local rerun with true sentence-transformers dense backend",
+      "dataset": {
+        "corpus": "data/scifact/raw/corpus.jsonl",
+        "queries": "data/scifact/raw/queries.jsonl",
+        "train_qrels": "data/scifact/raw/qrels_train.jsonl",
+        "test_qrels": "data/scifact/raw/qrels_test.jsonl"
+      },
+      "router_training": {
+        "train_queries": 809,
+        "test_queries": 300,
+        "train_label_distribution": {
+          "dense": 99,
+          "hybrid": 639,
+          "sparse": 71
+        },
+        "accuracy": 0.7333333333333333,
+        "router_settings": {
+          "policy": "classifier",
+          "label_metrics": [
+            "mrr@10"
+          ],
+          "label_weights": [
+            1.0
+          ],
+          "label_tie_preference": "hybrid",
+          "confidence_threshold": 0.45,
+          "fallback_mode": "dense"
+        }
+      },
+      "comparison": {
+        "sparse": {
+          "recall@10": 0.7756666666666666,
+          "mrr@10": 0.6183650793650796,
+          "ndcg@10": 0.652284944994416,
+          "avg_latency_ms": 25.337324179708958,
+          "avg_estimated_total_tokens": 2274.3633333333332,
+          "avg_estimated_cost_usd": 0.004548726666666664
+        },
+        "dense": {
+          "recall@10": 0.79,
+          "mrr@10": 0.6055357142857142,
+          "ndcg@10": 0.6479491607164062,
+          "avg_latency_ms": 5.640214333931605,
+          "avg_estimated_total_tokens": 2165.383333333333,
+          "avg_estimated_cost_usd": 0.004330766666666669
+        },
+        "hybrid": {
+          "recall@10": 0.8305555555555555,
+          "mrr@10": 0.6562724867724867,
+          "ndcg@10": 0.69388083905276,
+          "avg_latency_ms": 28.77027592311303,
+          "avg_estimated_total_tokens": 2208.9766666666665,
+          "avg_estimated_cost_usd": 0.004417953333333332
+        },
+        "router": {
+          "recall@10": 0.8106666666666668,
+          "mrr@10": 0.660809523809524,
+          "ndcg@10": 0.6945253723848954,
+          "avg_latency_ms": 42.91935736934344,
+          "avg_estimated_total_tokens": 2210.9266666666667,
+          "avg_estimated_cost_usd": 0.004421853333333332
+        },
+        "oracle": {
+          "recall@10": 0.8662222222222222,
+          "mrr@10": 0.7336851851851853,
+          "ndcg@10": 0.7606334548163898,
+          "avg_latency_ms": 25.353693043192226,
+          "avg_estimated_total_tokens": 2207.133333333333,
+          "avg_estimated_cost_usd": 0.004414266666666665
+        }
+      },
+      "summary": {
+        "best_fixed_strategy": "hybrid",
+        "router_tradeoff": "router now edges past fixed hybrid on MRR@10 and nDCG@10, but still trails the oracle upper bound",
+        "upper_bound_signal": "oracle remains clearly stronger than the improved router"
+      }
+    },
+    "scidocs": {
+      "source": "current local run with official qrels for baselines and query-level self-split for router",
+      "dataset": {
+        "corpus": "data/scidocs/raw/corpus.jsonl",
+        "queries": "data/scidocs/raw/queries.jsonl",
+        "official_qrels": "data/scidocs/raw/qrels_test.jsonl",
+        "router_train_qrels": "data/scidocs/raw/qrels_router_train.jsonl",
+        "router_test_qrels": "data/scidocs/raw/qrels_router_test.jsonl",
+        "router_split_meta": "data/scidocs/raw/qrels_router_split_meta.json"
+      },
+      "baseline_comparison_full_qrels": {
+        "sparse": {
+          "recall@10": 0.1542833333333334,
+          "mrr@10": 0.26804920634920615,
+          "ndcg@10": 0.14949724102509565,
+          "avg_latency_ms": 204.12305587343872,
+          "avg_estimated_total_tokens": 1786.843,
+          "avg_estimated_cost_usd": 0.0035736860000000017
+        },
+        "dense": {
+          "recall@10": 0.23069999999999943,
+          "mrr@10": 0.36066904761904717,
+          "ndcg@10": 0.21662774853285502,
+          "avg_latency_ms": 72.9749899301678,
+          "avg_estimated_total_tokens": 1678.122,
+          "avg_estimated_cost_usd": 0.0033562440000000017
+        },
+        "hybrid": {
+          "recall@10": 0.20991666666666595,
+          "mrr@10": 0.3343496031746031,
+          "ndcg@10": 0.19847965982431753,
+          "avg_latency_ms": 252.68505830690265,
+          "avg_estimated_total_tokens": 1756.995,
+          "avg_estimated_cost_usd": 0.0035139900000000046
+        }
+      },
+      "router_training": {
+        "test_queries": 200,
+        "accuracy": 0.5,
+        "train_queries": 800,
+        "train_label_distribution": {
+          "dense": 205,
+          "hybrid": 539,
+          "sparse": 56
+        },
+        "router_settings": {
+          "policy": "classifier",
+          "label_metrics": [
+            "mrr@10"
+          ],
+          "label_weights": [
+            1.0
+          ],
+          "label_tie_preference": "hybrid",
+          "confidence_threshold": 0.45,
+          "fallback_mode": "dense"
+        }
+      },
+      "router_comparison_self_split": {
+        "sparse": {
+          "recall@10": 0.1659999999999999,
+          "mrr@10": 0.3019543650793652,
+          "ndcg@10": 0.1669324681700718,
+          "avg_latency_ms": 144.82302114367485,
+          "avg_estimated_total_tokens": 1768.675,
+          "avg_estimated_cost_usd": 0.0035373499999999973
+        },
+        "dense": {
+          "recall@10": 0.25099999999999995,
+          "mrr@10": 0.3722500000000001,
+          "ndcg@10": 0.23072703124094424,
+          "avg_latency_ms": 11.774667650461197,
+          "avg_estimated_total_tokens": 1640.18,
+          "avg_estimated_cost_usd": 0.0032803599999999982
+        },
+        "hybrid": {
+          "recall@10": 0.24275000000000024,
+          "mrr@10": 0.343248015873016,
+          "ndcg@10": 0.21781870899801864,
+          "avg_latency_ms": 157.72191734984517,
+          "avg_estimated_total_tokens": 1711.22,
+          "avg_estimated_cost_usd": 0.0034224399999999993
+        },
+        "router": {
+          "recall@10": 0.2480000000000002,
+          "mrr@10": 0.36200396825396824,
+          "ndcg@10": 0.2276607359627279,
+          "avg_latency_ms": 135.1502064988017,
+          "avg_estimated_total_tokens": 1674.83,
+          "avg_estimated_cost_usd": 0.0033496599999999982
+        },
+        "oracle": {
+          "recall@10": 0.26350000000000023,
+          "mrr@10": 0.4636349206349206,
+          "ndcg@10": 0.26000731122009596,
+          "avg_latency_ms": 120.4528990201652,
+          "avg_estimated_total_tokens": 1700.97,
+          "avg_estimated_cost_usd": 0.0034019399999999996
+        }
+      },
+      "summary": {
+        "best_fixed_strategy_full_qrels": "dense",
+        "router_tradeoff": "router improves over the earlier centroid baseline and gets closer to dense, but still does not beat the best fixed strategy",
+        "upper_bound_signal": "oracle remains substantially stronger than the improved router"
+      }
+    }
+  },
+  "cross_dataset_summary": {
+    "main_signal": "the best fixed retrieval strategy is dataset-dependent",
+    "proposal_support": "SciFact favors hybrid while SCIDOCS favors dense, supporting the need for adaptive retrieval selection",
+    "next_step": "add retrieval-confidence features and dataset-aware fallback calibration"
+  }
+}
