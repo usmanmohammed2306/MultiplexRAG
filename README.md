@@ -1,4 +1,20 @@
-# MultiplexRAG Project Starter
+# MultiplexRAG: Query-Adaptive Retrieval
+
+A retrieval system that chooses between BM25, dense search and reciprocal-rank fusion for each query, using a learned router and a confidence-based fallback.
+
+## Result at a glance
+
+On **324 NFCorpus validation queries**, the reported MRR@10 increased from **0.5110** for the strongest fixed retriever to **0.5270** for the experimental router: an absolute increase of **0.0160**. This is a validation result, not an untouched-test or production claim.
+
+The repository includes fixed-retriever baselines, query-level splits, ranking-metric checks and routing ablations. Integrated pipeline presets and later Phase 4 experiments are reported separately below; the default pipeline does not reproduce every experimental best result.
+
+**Architecture:** query features → learned router → BM25 / dense / fused ranking → evaluation.
+
+**Stack:** Python, scikit-learn, Sentence Transformers, FAISS and BM25.
+
+See the [course report](REPORT.md), [experimental artifacts](phase4/) and the setup and evaluation instructions below.
+
+---
 
 Final course report: [REPORT.md](REPORT.md)
 
